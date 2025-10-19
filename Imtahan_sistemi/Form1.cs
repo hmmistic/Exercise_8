@@ -1,4 +1,6 @@
-﻿namespace Imtahan_sistemi
+﻿using System.Windows.Forms;
+
+namespace Imtahan_sistemi
 {
     public partial class Form1 : Form
     {
@@ -25,11 +27,15 @@
                 isValid = false;
             }
 
+            else errorProvider1.SetError(maskedTextBox1, null);
+
             if (sdf2 > 10 || String.IsNullOrEmpty(maskedTextBox5.Text))
             {
                 errorProvider2.SetError(maskedTextBox5, "SDF2 balı boş, yaxud 10-dan yuxarı ola bilməz.");
                 isValid = false;
             }
+
+            else errorProvider2.SetError(maskedTextBox5, null);
 
             if (ff > 10 || String.IsNullOrEmpty(maskedTextBox4.Text))
             {
@@ -37,11 +43,15 @@
                 isValid = false;
             }
 
+            else errorProvider3.SetError(maskedTextBox4, null);
+
             if (seminar > 20 || String.IsNullOrEmpty(maskedTextBox3.Text))
             {
                 errorProvider4.SetError(maskedTextBox3, "Seminar balı boş, yaxud 20-dən yuxarı ola bilməz.");
                 isValid = false;
             }
+
+            else errorProvider4.SetError(maskedTextBox3, null);
 
             if (final > 50 || String.IsNullOrEmpty(maskedTextBox2.Text))
             {
@@ -49,17 +59,23 @@
                 isValid = false;
             }
 
+            else errorProvider5.SetError(maskedTextBox2, null);
+
             if (String.IsNullOrEmpty(textBox1.Text))
             {
                 errorProvider6.SetError(textBox1, "Tələbənin adı və soyadı boş saxlanıla bilməz.");
                 isValid = false;
             }
 
+            else errorProvider6.SetError(textBox1, null);
+
             if (String.IsNullOrEmpty(maskedTextBox6.Text))
             {
                 errorProvider7.SetError(maskedTextBox6, "Tələbə nömrəsi boş saxlanıla bilməz.");
                 isValid = false;
             }
+
+            else errorProvider7.SetError(maskedTextBox6, null);
 
             if (isValid)
             {
